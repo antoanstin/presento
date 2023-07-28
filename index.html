@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="HTML,JavaScript" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Presento</title>
+    <link rel="shortcut icon" href="data:image/png;base64,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" type="image/x-icon">
+    <link href="css/style.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="owl-carousel\owl.carousel.min.css" />
+    <link rel="stylesheet" href="owl-carousel\owl.theme.default.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Script&family=Poppins:ital,wght@0,200;0,300;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header_sec">
+      <div class="container">
+        <nav class="main-nav">
+          <div class="logos">
+            <a href=""
+              ><h3>Presento<span class="dot">.</span></h3></a
+            >
+          </div>
+          <ul class="menu">
+            <li><a class="redcol" href="#banner">Home</a></li>
+            <li><a href="#about-sec">About</a></li>
+            <li><a href="#service-sec">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#teams_sec">Team</a></li>
+            <li><a href="#">Blog</a></li>
+            <li class="dropdown">
+              <a href="">Drop Down</a>
+              <ul class="sub-menu">
+                <li><a href="">Drop Down 1</a></li>
+                <li class="deep-dropdown">
+                  <a href="">Deep Drop Down</a>
+                  <ul class="deep-sub-menu">
+                    <li><a href="">Deep Drop Down 1</a></li>
+                    <li><a href="">Deep Drop Down 2</a></li>
+                    <li><a href="">Deep Drop Down 3</a></li>
+                    <li><a href="">Deep Drop Down 4</a></li>
+                    <li><a href="">Deep Drop Down 5</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Drop Down 2</a></li>
+                <li><a href="#">Drop Down 3</a></li>
+                <li><a href="#">Drop Down 4</a></li>
+              </ul>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="get-bt"><a href="">Get Started</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <header id="header-res-sec">
+      <nav class="main-res-nav">
+        <div class="header-res-logo">
+          <a href=""
+            ><h3>Presento<span class="dot">.</span></h3></a
+          >
+        </div>
+
+        <div class="nav-icon">
+          <i class="bi bi-list burger-icon"></i>
+          <ul class="header-res-menu  calloff">
+            <li><a href="#banner">Home</a></li>
+            <li><a href="#about-sec">About</a></li>
+            <li><a href="#service-sec">Service</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#teams_sec">Team</a></li>
+            <li><a href="#">Blog</a></li>
+            <li class="drop-res-down">
+              <a href="">Drop Down <i class="bi bi-chevron-down"></i></a>
+              <ul class="drop-res-down-menu">
+                <li><a href="#">Drop Down 1</a></li>
+                <li class="drop-res-down">
+                  <a href="#"
+                    >Deep Drop Down <i class="bi bi-chevron-down"></i
+                  ></a>
+                  <ul class="drop-res-down-menu">
+                    <li><a href="#">Deep Drop Down 1</a></li>
+                    <li><a href="#">Deep Drop Down 2</a></li>
+                    <li><a href="#">Deep Drop Down 3</a></li>
+                    <li><a href="#">Deep Drop Down 4</a></li>
+                    <li><a href="#">Deep Drop Down 5</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Drop Down 2</a></li>
+                <li><a href="#">Drop Down 3</a></li>
+                <li><a href="#">Drop Down 4</a></li>
+              </ul>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+
+        </div>
+      </nav>
+    </header>
+    <section id="banner">
+      <div class="container">
+        <p>Bettter digital experience<br />with Presento</p>
+        <h1>
+          We are team of talented designers making websites<br />with Bootstrap
+        </h1>
+        <div class="d-banner">
+          <div class="cnt1">
+            <a href="">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="swiper">
+      <div class="container">
+        <div class="swiper-row">
+          <div class="brand owl-carousel owl-theme">
+            <div class="swiper-card">
+              <img src="image/img-1.png" />
+            </div>
+            <div class="swiper-card">
+              <img src="image/img-2.png" />
+            </div>
+            <div class="swiper-card">
+              <img src="image/img-3.png" />
+            </div>
+            <div class="swiper-card">
+              <img src="image/img-4.png" />
+            </div>
+            <div class="swiper-card">
+              <img src="image/img-5.png" />
+            </div>
+            <div class="swiper-card">
+              <img src="image/img-6.png" />
+            </div>
+            <div class="swiper-card">
+              <img src="image/img-7.png" />
+            </div>
+            <div class="swiper-card">
+              <img src="image/img-8.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about-sec">
+      <div class="container">
+        <div class="about-row">
+          <div class="about-title">
+            <h1>Voluptatem dignissimos provident quasi</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis
+              aute irure dolor in reprehenderit
+            </p>
+            <div class="about-button">
+              <h4>ABOUT US ></h4>
+            </div>
+          </div>
+          <div class="about-content">
+            <div class="child-col">
+              <i class="bi bi-receipt"></i>
+              <h1>Corporis voluptates sit</h1>
+              <p>
+                Consequuntur sunt aut quasi enim aliquam quae harum pariatur
+                laboris nisi ut aliquip
+              </p>
+            </div>
+            <div class="child-col">
+              <i class="bi bi-box"></i>
+              <h1>Ullamco laboris nisi</h1>
+              <p>
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                qui officia deserunt
+              </p>
+            </div>
+            <div class="child-col">
+              <i class="bi bi-images"></i>
+              <h1>Labore consequatur</h1>
+              <p>
+                Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut
+                maiores omnis facere
+              </p>
+            </div>
+            <div class="child-col">
+              <i class="bi bi-shield"></i>
+              <h1>Beatae veritatis</h1>
+              <p>
+                Expedita veritatis consequuntur nihil tempore laudantium vitae
+                denat pacta
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="count-sec">
+      <div class="container">
+        <div class="count-row">
+          <div class="count-col">
+            <div class="count-card">
+              <i class="bi bi-emoji-smile"></i>
+              <span>232</span>
+              <p>Happy Clients</p>
+            </div>
+          </div>
+          <div class="count-col">
+            <div class="count-card">
+              <i class="bi bi-journal-richtext"></i>
+              <span>521</span>
+              <p>Projects</p>
+            </div>
+          </div>
+          <div class="count-col">
+            <div class="count-card">
+              <i class="bi bi-headset"></i>
+              <span>1463</span>
+              <p>Hours Of Support</p>
+            </div>
+          </div>
+          <div class="count-col">
+            <div class="count-card">
+              <i class="bi bi-people"></i>
+              <span>15</span>
+              <p>Hard Workers</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tabs">
+      <div class="container">
+        <div class="nav-list">
+          <div class="nav-item">
+            <div class="nav-link activa">
+              <i class="bi bi-reception-4"></i>
+              <h4>Modi sit est dela pireda</h4>
+            </div>
+          </div>
+          <div class="nav-item">
+            <div class="nav-link">
+              <i class="bi bi-qr-code-scan"></i>
+              <h4>Unde praese mara setra le</h4>
+            </div>
+          </div>
+          <div class="nav-item">
+            <div class="nav-link">
+              <i class="bi bi-brightness-high"></i>
+              <h4>Pariatur explica nitro</h4>
+            </div>
+          </div>
+          <div class="nav-item">
+            <div class="nav-link">
+              <i class="bi bi-shop"></i>
+              <h4>Nostrum qui dile node</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content">
+          <div class="tab-row">
+            <div class="tab-col">
+              <h3>
+                Voluptatem dignissimos provident quasi corporis voluptates sit
+                assumenda.
+              </h3>
+              <p class="fst-italic">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <ul>
+                <li>
+                  <i class="bi bi-check-all"></i>Ullamco laboris nisi ut aliquip
+                  ex ea commodo consequat.
+                </li>
+                <li>
+                  <i class="bi bi-check-all"></i> Duis aute irure dolor in
+                  reprehenderit in voluptate velit.
+                </li>
+                <li>
+                  <i class="bi bi-check-all"></i>Ullamco laboris nisi ut aliquip
+                  ex ea commodo consequat. Duis aute irure dolor in
+                  reprehenderit in voluptate trideta storacalaperda mastiro
+                  dolore eu fugiat nulla pariatur.
+                </li>
+              </ul>
+              <p>
+                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                aute irure dolor in reprehenderit in voluptate velit esse cillum
+                dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum
+              </p>
+            </div>
+            <div class="tab-col">
+              <img
+                src="https://bootstrapmade.com/demo/templates/Presento/assets/img/tabs-1.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /*----------------------sevice section---------------------* -->
+    <section class="service-sec" id="service-sec">
+      <div class="container">
+        <div class="service-title">
+          <h2>Services</h2>
+          <p>
+            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
+            aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
+            quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
+          </p>
+        </div>
+
+        <div class="service-row">
+          <div class="service-col">
+            <div class="icon-box">
+              <i class="bi bi-briefcase"></i>
+              <h4>Lorem Ipsum</h4>
+              <p>
+                Voluptatum deleniti atque corrupti quos dolores et quas
+                molestias excepturi sint occaecati cupiditate
+              </p>
+            </div>
+          </div>
+
+          <div class="service-col">
+            <div class="icon-box">
+              <i class="bi bi-card-checklist"></i>
+              <h4>Dolor Sitema</h4>
+              <p>
+                Minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat tarad limino ata
+              </p>
+            </div>
+          </div>
+
+          <div class="service-col">
+            <div class="icon-box">
+              <i class="bi bi-bar-chart"></i>
+              <h4>Sed ut perspiciatis</h4>
+              <p>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur
+              </p>
+            </div>
+          </div>
+
+          <div class="service-col">
+            <div class="icon-box">
+              <i class="bi bi-binoculars"></i>
+              <h4>Nemo Enim</h4>
+              <p>
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                qui officia deserunt mollit anim id est laborum
+              </p>
+            </div>
+          </div>
+
+          <div class="service-col">
+            <div class="icon-box">
+              <i class="bi bi-brightness-high"></i>
+              <h4>Magni Dolore</h4>
+              <p>
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                blanditiis praesentium voluptatum delenit
+              </p>
+            </div>
+          </div>
+
+          <div class="service-col">
+            <div class="icon-box">
+              <i class="bi bi-calendar4-week"></i>
+              <h4>Eiusmod Tempor</h4>
+              <p>
+                Et harum quidem rerum facilis est et expedita distinctio. Nam
+                libero tempore, cum soluta nobis est eligendi
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- /*----------------------portfolio section---------------------* -->
+
+    <section class="portfolio-sec" id="portfolio">
+      <div class="container">
+        <div class="portfolio-title">
+          <h2>PORTFOLIO</h2>
+        </div>
+        <div class="portfolio-row">
+          <div class="portfolio-col">
+            <div class="card">
+              <div class="item">
+                <img
+                  src="https://bootstrapmade.com/demo/templates/Presento/assets/img/portfolio/portfolio-1.jpg"
+                />
+
+                <div class="port-info">
+                  <h2>App 1</h2>
+                  <p><em>APP1</em></p>
+
+                  <div class="port-icon">
+                    <i class="bi bi-plus"></i>
+                    <i class="bi bi-link"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-col">
+            <div class="card">
+              <div class="item">
+                <img
+                  src="https://bootstrapmade.com/demo/templates/Presento/assets/img/portfolio/portfolio-2.jpg"
+                />
+
+                <div class="port-info">
+                  <h2>App 1</h2>
+                  <p><em>APP1</em></p>
+
+                  <div class="port-icon">
+                    <i class="bi bi-plus"></i>
+                    <i class="bi bi-link"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-col">
+            <div class="card">
+              <div class="item">
+                <img
+                  src="https://bootstrapmade.com/demo/templates/Presento/assets/img/portfolio/portfolio-3.jpg"
+                />
+
+                <div class="port-info">
+                  <h2>App 1</h2>
+                  <p><em>APP1</em></p>
+
+                  <div class="port-icon">
+                    <i class="bi bi-plus"></i>
+                    <i class="bi bi-link"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-col">
+            <div class="card">
+              <div class="item">
+                <img
+                  src="https://bootstrapmade.com/demo/templates/Presento/assets/img/portfolio/portfolio-4.jpg"
+                />
+
+                <div class="port-info">
+                  <h2>App 1</h2>
+                  <p><em>APP1</em></p>
+
+                  <div class="port-icon">
+                    <i class="bi bi-plus"></i>
+                    <i class="bi bi-link"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-col">
+            <div class="card">
+              <div class="item">
+                <img
+                  src="https://bootstrapmade.com/demo/templates/Presento/assets/img/portfolio/portfolio-5.jpg"
+                />
+
+                <div class="port-info">
+                  <h2>App 1</h2>
+                  <p><em>APP1</em></p>
+
+                  <div class="port-icon">
+                    <i class="bi bi-plus"></i>
+                    <i class="bi bi-link"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-col">
+            <div class="card">
+              <div class="item">
+                <img
+                  src="https://bootstrapmade.com/demo/templates/Presento/assets/img/portfolio/portfolio-6.jpg"
+                />
+                <div class="port-info">
+                  <h2>App 1</h2>
+                  <p><em>APP1</em></p>
+
+                  <div class="port-icon">
+                    <i class="bi bi-plus"></i>
+                    <i class="bi bi-link"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-col">
+            <div class="card">
+              <div class="item">
+                <img
+                  src="https://bootstrapmade.com/demo/templates/Presento/assets/img/portfolio/portfolio-7.jpg"
+                />
+                <div class="port-info">
+                  <h2>App 1</h2>
+                  <p><em>APP1</em></p>
+
+                  <div class="port-icon">
+                    <i class="bi bi-plus"></i>
+                    <i class="bi bi-link"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-col">
+            <div class="card">
+              <div class="item">
+                <img
+                  src="https://bootstrapmade.com/demo/templates/Presento/assets/img/portfolio/portfolio-8.jpg"
+                />
+                <div class="port-info">
+                  <h2>App 1</h2>
+                  <p><em>APP1</em></p>
+
+                  <div class="port-icon">
+                    <i class="bi bi-plus"></i>
+                    <i class="bi bi-link"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-col">
+            <div class="card">
+              <div class="item">
+                <img
+                  src="https://bootstrapmade.com/demo/templates/Presento/assets/img/portfolio/portfolio-9.jpg"
+                />
+                <div class="port-info">
+                  <h2>App 1</h2>
+                  <p><em>APP1</em></p>
+
+                  <div class="port-icon">
+                    <i class="bi bi-plus"></i>
+                    <i class="bi bi-link"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- -----------------pricing-sec--------------- -->
+
+    <section class="pricing-sec">
+      <div class="container">
+        <div class="pricing-title">
+          <h2>Pricing</h2>
+          <p>
+            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
+            aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
+            quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
+          </p>
+        </div>
+
+        <div class="pricing-row">
+          <div class="pricing-col">
+            <div class="box">
+              <h3>Free</h3>
+              <h4><sup>$</sup>0<span> / month</span></h4>
+              <ul>
+                <li>Aida dere</li>
+                <li>Nec feugiat nisl</li>
+                <li>Nulla at volutpat dola</li>
+                <li class="na">Pharetra massa</li>
+                <li class="na">Massa ultricies mi</li>
+              </ul>
+              <div class="pricing-btn">
+                <a href="#" class="buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="pricing-col">
+            <div class="box featured" style="background-color: #e03a3c">
+              <h3>Business</h3>
+              <h4><sup>$</sup>19<span> / month</span></h4>
+              <ul>
+                <li>Aida dere</li>
+                <li>Nec feugiat nisl</li>
+                <li>Nulla at volutpat dola</li>
+                <li>Pharetra massa</li>
+                <li class="na">Massa ultricies mi</li>
+              </ul>
+              <div class="pricing-btn">
+                <a href="#" class="buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="pricing-col">
+            <div class="box">
+              <h3>Developer</h3>
+              <h4><sup>$</sup>29<span> / month</span></h4>
+              <ul>
+                <li>Aida dere</li>
+                <li>Nec feugiat nisl</li>
+                <li>Nulla at volutpat dola</li>
+                <li>Pharetra massa</li>
+                <li>Massa ultricies mi</li>
+              </ul>
+              <div class="pricing-btn">
+                <a href="#" class="buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="faq-section">
+      <div class="container">
+        <div class="faq-title">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+        <ul class="faq-list">
+          <li>
+            <a
+              >Non consectetur a erat nam at lectus urna duis?<i
+                class="bi bi-chevron-down icon-show"
+              ></i
+            ></a>
+          </li>
+          <li>
+            <a
+              >Feugiat scelerisque varius morbi enim nunc faucibus a
+              pellentesque??<i class="bi bi-chevron-down icon-show"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              >Dolor sit amet consectetur adipiscing elit pellentesque habitant
+              morbi??<i class="bi bi-chevron-down icon-show"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              >Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla??<i
+                class="bi bi-chevron-down icon-show"
+              ></i
+            ></a>
+          </li>
+          <li>
+            <a
+              >Tempus quam pellentesque nec nam aliquam sem et tortor
+              consequat?<i class="bi bi-chevron-down icon-show"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              >Tortor vitae purus faucibus ornare. Varius vel pharetra vel
+              turpis nunc eget lorem dolor?<i
+                class="bi bi-chevron-down icon-show"
+              ></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- --------------------------team-section--------------------- -->
+    <section class="team-section" id="teams_sec">
+      <div class="container">
+        <div class="team-title">
+          <h2>Team</h2>
+          <p>
+            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
+            aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
+            quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
+          </p>
+        </div>
+
+        <div class="team-row">
+          <div class="team-col">
+            <div class="member">
+              <div class="member-img">
+                <img
+                  src="https://bootstrapmade.com/demo/templates/Presento/assets/img/team/team-1.jpg"
+                  class="img-fluid"
+                />
+                <div class="social-links">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Walter White</h4>
+                <span>Chief Executive Officer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-col">
+            <div class="member">
+              <div class="member-img">
+                <img
+                  src="https://bootstrapmade.com/demo/templates/Presento/assets/img/team/team-2.jpg"
+                  class="img-fluid"
+                />
+                <div class="social-links">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Sarah Jhonson</h4>
+                <span>Product Manager</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-col">
+            <div class="member">
+              <div class="member-img">
+                <img
+                  src="https://bootstrapmade.com/demo/templates/Presento/assets/img/team/team-3.jpg"
+                  class="img-fluid"
+                />
+                <div class="social-links">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>William Anderson</h4>
+                <span>CTO</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-col">
+            <div class="member">
+              <div class="member-img">
+                <img
+                  src="https://bootstrapmade.com/demo/templates/Presento/assets/img/team/team-4.jpg"
+                  class="img-fluid"
+                />
+                <div class="social-links">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Amanda Jepson</h4>
+                <span>Accountant</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ------------------------------contact-section------------------ -->
+    <section class="contact-sec" id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p class="secp">
+            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
+            aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
+            quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
+          </p>
+        </div>
+
+        <div class="contact-row">
+          <div class="contact-col">
+            <div class="sub-row">
+              <div class="sub-col1">
+                <div class="info-box">
+                  <div class="round-ji"><i class="bi bi-map"></i></div>
+                  <h3>Our Address</h3>
+                  <p>A108 Adam Street, New York, NY 535022</p>
+                </div>
+              </div>
+              <div class="sub-col">
+                <div class="info-box">
+                  <div class="round-ji"><i class="bi bi-envelope"></i></div>
+                  <h3>Email Us</h3>
+                  <p>info@example.com</p>
+                  <p>contact@example.com</p>
+                </div>
+              </div>
+              <div class="sub-col">
+                <div class="info-box">
+                  <div class="round-ji">
+                    <i class="bi bi-telephone-fill"></i>
+                  </div>
+                  <h3>Call Us</h3>
+                  <p>+1 5589 55488 55</p>
+                  <p>+1 6678 254445 41</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact-col">
+            <form class="main-form">
+              <div class="form-row">
+                <div class="form-col">
+                  <input
+                    type="text"
+                    name="name"
+                    class="form-control"
+                    id="name"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+                <div class="form-col">
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    id="email"
+                    placeholder="Your Email"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="subject"
+                  id="subject"
+                  placeholder="Subject"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  class="form-control"
+                  name="message"
+                  rows="5"
+                  placeholder="Message"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="send-btn">
+                <button class="submit-btn" type="submit">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ------------------------footer-sec-------------- -->
+    <footer class="footer-sec">
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-row">
+            <div class="footer-contact">
+              <h3>Presento<span>.</span></h3>
+              <br />
+              <p>
+                A108 Adam Street <br />
+                New York, NY 535022<br />
+                United States <br /><br /><br />
+                <strong>Phone:</strong> +1 5589 55488 55<br />
+                <strong>Email:</strong> info@example.com<br />
+              </p>
+            </div>
+
+            <div class="footer-links">
+              <h4>Useful Links</h4>
+              <ul>
+                <li>
+                  <i class="bi bi-chevron-right"></i> <a href="#">Home</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i> <a href="#">About us</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i> <a href="#">Services</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="#">Terms of service</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="#">Privacy policy</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer-service">
+              <h4>Our Services</h4>
+              <ul>
+                <li>
+                  <i class="bi bi-chevron-right"></i> <a href="#">Web Design</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="#">Web Development</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i
+                  ><a href="#">Product Management</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i> <a href="#">Marketing</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="#">Graphic Design</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer-newsletter">
+              <h4>Join Our Newsletter</h4>
+              <p>
+                Tamen quem nulla quae legam multos aute sint culpa legam noster
+                magna
+              </p>
+              <form class="footer-form">
+                <input class="form-email" type="email" name="email" />
+                <input class="form-submit" type="submit" value="Subscribe" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-sec">
+        <div class="fotter-bottom">
+          <div class="copy">
+            <div class="copyright">
+              © Copyright <strong><span>Presento</span></strong
+              >. All Rights Reserved
+            </div>
+            <div class="credits">
+              Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+          </div>
+          <div class="footer-social-links">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="owl-carousel\owl.carousel.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
