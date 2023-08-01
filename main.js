@@ -22,3 +22,11 @@ var btn=document.querySelector(".burger-icon");
 btn.addEventListener("click",function(e){
     e.target.parentNode.querySelector(".header-res-menu").classList.toggle("calloff")
 })
+var clos=document.getElementsByClassName("clos")
+// console.log(clos);
+for(i=0;i<clos.length;i++){
+    clos[i].addEventListener("click",function(e){
+       e.target.parentNode.parentNode.classList.add("calloff") 
+       
+    })
+}
